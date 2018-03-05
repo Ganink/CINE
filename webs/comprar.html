@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Comprar entradas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/portfolio.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title gTitle" id=""></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="m-body">
+                </div>
+                <div class="modal-footer">
+                    <a type="button" id="comprar" href="../index.html" class="btn btn-outline-success reserv">Reservar entrada</a>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="myContainer">
+
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand text-center titulo" href="../index.html" style="font-size:30px; color: red;">CARTELERA DE CINE</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../index.html">INICIO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section>
+
+            <div class="container">
+                <h2 class="display-5 title">Rellene el siguiente formulario con sus datos para realizar la compra</h2>
+                <div class="film"></div>
+                <form>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" required class="form-control form-control-sm" id="smFormGroupInput" placeholder="MIGUEL">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Apellidos</label>
+                        <div class="col-sm-10">
+                            <input type="text" required class="form-control form-control-sm" id="smFormGroupInput" placeholder="PÉREZ CALABRO">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" required class="form-control form-control-sm" id="smFormGroupInput" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Numero de teléfono</label>
+                        <div class="col-sm-10">
+                            <input type="tel" required class="form-control form-control-sm" id="smFormGroupInput" placeholder="666666666">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Numero de tarjeta</label>
+                        <div class="col-8">
+                            <input type="text" class="form-control" placeholder="9155234263694374">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Fecha de caducidad y CVC</label>
+                        <div class="col-2">
+                            <input type="text" class="form-control" placeholder="04/2030">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="CVC">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Seleccione horario</label>
+                        <select class="form-control" id="horario">
+                        </select>
+                      </div>
+                    <div class="form-group row">
+                        <div class="col-sm">
+                            <label class="col-sm-10 col-form-label col-form-label-sm">Al hacer click está aceptando nuestras
+                                <a href="#">condiciones de pago</a> y nuestras
+                                <a href="#">políticas de seguridad</a> para más información, visite los enlaces.
+                            </label>
+                            <input class="form-check-input" type="checkbox" id="">
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <a type="button" id="buy" href="../index.html" data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-success btn-lg btn-block">Enviar</a>
+                        <a type="button" href="../index.html" id="cancel" class="btn btn-danger btn-lg btn-block">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>COPYRIGHT 2018 © CHRISTIAN CALERO ERAZO
+            <br/>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/">
+                <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/es/88x31.png"
+                />
+            </a>
+        </p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/confirm.js"></script>
+</body>
+
+</html>
